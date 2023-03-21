@@ -1,17 +1,11 @@
 package com.code_exercises;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 class Challenging {
 
     public static void main(String[] args) {
-
-        Challenging challenging = new Challenging();
-//        System.out.println("Longest Palindrome: " + challenging.findLongestPalindrome("abcba"));
-//        System.out.println(challenging.findLongestCommonSequence("abattd","gdgeaba"));
-        challenging.largestPrimeFactor(100);
     }
 
     /*
@@ -112,9 +106,6 @@ Arrays.asList(2,3,5,7,11,13,17,19,23,29)
     }
 
     /*
-
-    https://code-exercises.com/programming/hard/17/package-rice-bags-part-2
-
     Package Rice Bags (part 2)
 Provided that you have a given number of small rice bags (1 kilo each) and big rice bags (5 kilos each), write a method
  that returns the minimum number of small bags necessary to package goal kilos of rice. Return -1 if it is not possible
