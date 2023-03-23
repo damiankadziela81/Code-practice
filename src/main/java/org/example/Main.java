@@ -1,8 +1,6 @@
 package org.example;
 
 import java.util.*;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,6 +16,7 @@ public class Main {
 //        secondHighestNumberInArray();
 //        armstrongNumber();
 //        removeSpaces();
+        pyramidPattern();
 
     }
 
@@ -268,5 +267,81 @@ public class Main {
             if(c!=' ')sb.append(c);
         }
         System.out.println(sb);
+    }
+
+    //Pyramids
+    static void pyramidPattern() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter number of rows: ");
+        int rows = scanner.nextInt();
+
+        System.out.println("Choose your pattern [1-7]");
+        int pattern = scanner.nextInt();
+        switch(pattern) {
+            case 1: pyramidPattern1(rows);
+            break;
+            case 2: pyramidPattern2(rows);
+            break;
+            case 3: pyramidPattern3(rows);
+            break;
+            case 4: pyramidPattern4(rows);
+            break;
+            case 5: pyramidPattern5(rows);
+            break;
+        }
+    }
+
+    private static void printWhiteSpaces(int howMany) {
+        for(int i = 0; i < howMany; i++) System.out.print(" ");
+    }
+
+    private static void pyramidPattern1(int rows) {
+        for(int i = 1; i <= rows; i++){
+            printWhiteSpaces(rows-i);
+            for(int j = 1; j<=i; j++) System.out.print(i + " ");
+            System.out.println();
+        }
+    }
+    private static void pyramidPattern2(final int rows) {
+        for(int i = 1; i <= rows; i++){
+            printWhiteSpaces(rows - i);
+            for(int j=1; j<=i; j++) System.out.print(j + " ");
+            System.out.println();
+        }
+    }
+
+    private static void pyramidPattern3(final int rows) {
+        for(int i = 0; i < rows; i++){
+            printWhiteSpaces(rows - i);
+            for(int j=0; j<=i; j++) System.out.print("* ");
+            System.out.println();
+        }
+    }
+
+    private static void pyramidPattern4(final int rows) {
+        for(int i = 0; i <= rows; i++){
+            printWhiteSpaces(2*(rows - i));
+            for(int j=1; j<=i; j++) System.out.print(j + " ");
+            for(int j=i-1; j>0; j--) System.out.print(j + " ");
+            System.out.println();
+        }
+    }
+
+    private static void pyramidPattern5(final int rows) {
+        for(int i = rows; i >= 1; i--){
+            printWhiteSpaces(2*i);
+            for(int j=i; j<=rows; j++) System.out.print(j + " ");
+            for(int j=rows-1; j>=i ; j--) System.out.print(j + " ");
+            System.out.println();
+        }
+    }
+
+    private static void pyramidPattern5Alternate(final int rows) {
+        for(int i = 0; i < rows; i++){
+            printWhiteSpaces(2*(rows - i));
+            for(int j=rows-i; j<=rows; j++) System.out.print(j + " ");
+            for(int j=rows-1; j>=rows-i; j--) System.out.print(j + " ");
+            System.out.println();
+        }
     }
 }
