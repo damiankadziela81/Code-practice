@@ -270,6 +270,7 @@ public class Main {
     }
 
     //Pyramids
+    //    https://www.digitalocean.com/community/tutorials/pyramid-pattern-programs-in-java
     static void pyramidPattern() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter number of rows: ");
@@ -287,6 +288,10 @@ public class Main {
             case 4: pyramidPattern4(rows);
             break;
             case 5: pyramidPattern5(rows);
+            break;
+            case 6: pyramidPattern6(rows);
+            break;
+            case 7: pyramidPattern7(rows);
             break;
         }
     }
@@ -341,6 +346,22 @@ public class Main {
             printWhiteSpaces(2*(rows - i));
             for(int j=rows-i; j<=rows; j++) System.out.print(j + " ");
             for(int j=rows-1; j>=rows-i; j--) System.out.print(j + " ");
+            System.out.println();
+        }
+    }
+
+    private static void pyramidPattern6(final int rows) {
+        for (int i = 0; i < rows; i++) {
+            printWhiteSpaces(i);
+            for(int j=rows-i; j>0; j--) System.out.print("* ");
+            System.out.println();
+        }
+    }
+
+    private static void pyramidPattern7(final int rows) {
+        for (int i = 0; i < rows; i++) {
+            printWhiteSpaces(i);
+            for(int j=rows-i; j>0; j--) System.out.print(rows-i + " ");
             System.out.println();
         }
     }
