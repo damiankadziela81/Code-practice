@@ -11,13 +11,18 @@ public class Main {
 //        countUniqueWordsWithHashMap();
 //        iterateHashMap();
 //        isNumberPrime();
-        isStringPalindrome();
+//        isStringPalindrome();
 //        fibonacci();
 //        iterateArray();
 //        howManyDuplicateCharacters();
 //        secondHighestNumberInArray();
 //        armstrongNumber();
-        removeSpaces();
+//        removeSpaces();
+
+    }
+
+    static boolean isEven(Integer number) {
+        return Integer.toBinaryString(number).endsWith("0");
     }
 
     static void reverseString() {
